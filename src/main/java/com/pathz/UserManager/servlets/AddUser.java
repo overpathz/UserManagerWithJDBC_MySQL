@@ -1,6 +1,7 @@
 package com.pathz.UserManager.servlets;
 
 import com.pathz.UserManager.database.DBHandler;
+import com.pathz.UserManager.database.Repository;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -12,7 +13,7 @@ import java.sql.SQLException;
 public class AddUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("userAdd.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("main.jsp");
         requestDispatcher.forward(request, response);
     }
 
@@ -21,15 +22,13 @@ public class AddUser extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        DBHandler dbHandler = new DBHandler();
-
         try {
-            dbHandler.addUser(username, password);
+            Repository.addUser(username, password);
         } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException throwables) {
             throwables.printStackTrace();
         }
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("userAdd.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("main.jsp");
         requestDispatcher.forward(request, response);
 
     }

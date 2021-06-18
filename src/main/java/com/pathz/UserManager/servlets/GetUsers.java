@@ -1,6 +1,7 @@
 package com.pathz.UserManager.servlets;
 
 import com.pathz.UserManager.database.DBHandler;
+import com.pathz.UserManager.database.Repository;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -12,9 +13,8 @@ import java.sql.SQLException;
 public class GetUsers extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DBHandler dbHandler = new DBHandler();
         try {
-            dbHandler.getUsers().stream().forEach(x-> System.out.println(x.getUsername()));
+            Repository.getUsers().stream().forEach(x-> System.out.println(x.getUsername()));
         } catch (SQLException | IllegalAccessException | InstantiationException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }

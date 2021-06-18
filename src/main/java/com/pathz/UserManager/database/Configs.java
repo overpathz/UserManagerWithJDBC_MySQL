@@ -1,9 +1,9 @@
 package com.pathz.UserManager.database;
 
 public class Configs {
-    protected String dbHost = "localhost";
-    protected String dbPort = "3306";
-    protected String dbUser = "root";
-    protected String dbPass = "root";
-    protected String dbName = "testing";
+    protected static String dbHost = "localhost";
+    protected static String dbPort = "3306";
+    protected static String dbUser = "root";
+    protected static String dbPass = "root";
+    protected static String dbName = "testing";
 }
