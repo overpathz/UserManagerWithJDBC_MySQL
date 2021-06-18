@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="UserManagerJDBC:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>UserManagerJDBC</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="UserManagerWithJDBC_MySQL-1.0.war">
+      <element id="artifact" artifact-name="UserManagerJDBC:war exploded" />
+    </root>
+  </artifact>
+</component>

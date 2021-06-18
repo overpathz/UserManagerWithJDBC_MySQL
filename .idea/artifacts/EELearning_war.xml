@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="EELearning:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>EELearning</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="EELearning-1.0.war">
+      <element id="artifact" artifact-name="EELearning:war exploded" />
+    </root>
+  </artifact>
+</component>
