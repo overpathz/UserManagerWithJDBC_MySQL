@@ -1,6 +1,6 @@
 package com.pathz.UserManager.database;
 
-import com.pathz.UserManager.entities.User;
+import com.pathz.UserManager.models.User;
 
 import java.sql.*;
 import java.util.ArrayList;

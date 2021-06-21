@@ -23,7 +23,7 @@ public class AddUser extends HttpServlet {
         String password = request.getParameter("password");
 
         try {
-            Repository.addUser(username, password);
+            Repository.addUser();
         } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException throwables) {
             throwables.printStackTrace();
         }
