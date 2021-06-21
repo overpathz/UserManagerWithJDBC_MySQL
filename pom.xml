@@ -48,6 +48,13 @@
             <version>1.2.6</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/at.favre.lib/bcrypt -->
+        <dependency>
+            <groupId>at.favre.lib</groupId>
+            <artifactId>bcrypt</artifactId>
+            <version>0.9.0</version>
+        </dependency>
+
 
     </dependencies>
 

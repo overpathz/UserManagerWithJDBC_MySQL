@@ -1,7 +1,9 @@
 package com.pathz.UserManager.servlets;
 
+import com.pathz.UserManager.DAO.UserDAO;
 import com.pathz.UserManager.database.DBHandler;
 import com.pathz.UserManager.database.Repository;
+import com.pathz.UserManager.models.User;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -23,9 +25,9 @@ public class AddUser extends HttpServlet {
         String password = request.getParameter("password");
 
         try {
-            Repository.addUser();
-        } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException throwables) {
-            throwables.printStackTrace();
+            UserDAO.insertUser(new User(username, password));
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
         }
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("main.jsp");

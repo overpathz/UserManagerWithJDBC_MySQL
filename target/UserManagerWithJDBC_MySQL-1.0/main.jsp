@@ -20,6 +20,7 @@
             color: white;
             margin-top: 0;
             padding: 0;
+            background-size: 100px;
         }
     </style>
 
