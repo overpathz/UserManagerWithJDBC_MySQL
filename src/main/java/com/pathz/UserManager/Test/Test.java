@@ -1,4 +1,4 @@
-package com.pathz.UserManager;
+package com.pathz.UserManager.Test;
 
 import com.pathz.UserManager.DAO.UserDAO;
 import com.pathz.UserManager.models.User;

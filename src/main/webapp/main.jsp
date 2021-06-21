@@ -55,7 +55,7 @@
     <h2 align="center">List of users</h2>
 
     <div align="center">
-        <form action="/addUser" method="post">
+        <form action="/add" method="get">
             <input id="add_user_button" type="submit" value="Add new user">
         </form>
     </div>
@@ -79,8 +79,8 @@
                 <tr align="center">
                     <td>${user.getId()}</td>
                     <td>${user.getUsername()}</td>
-                    <td><a href="<c:url value='/editUser/${user.getId()}'/>">Edit</a></td>
-                    <td><a href="<c:url value='/removeUser/${user.getId()}'/>">Delete</a></td>
+                    <td><a href="<c:url value='/update/${user.getId()}'/>">Edit</a></td>
+                    <td><a href="<c:url value='/remove/${user.getId()}'/>">Delete</a></td>
                 </tr>
             </c:forEach>
 

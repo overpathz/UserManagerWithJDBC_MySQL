@@ -1,4 +1,4 @@
-package com.pathz.UserManager.servlets;
+package com.pathz.UserManager.servlets.User;
 
 import com.pathz.UserManager.DAO.UserDAO;
 
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @WebServlet("/users")
-public class UserManagement extends HttpServlet {
+public class Users extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {

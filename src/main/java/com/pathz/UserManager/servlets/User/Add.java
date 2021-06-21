@@ -1,7 +1,7 @@
-package com.pathz.UserManager.servlets;
+package com.pathz.UserManager.servlets.User;
 
 import com.pathz.UserManager.DAO.UserDAO;
-import com.pathz.UserManager.Util.EncryptVerify;
+
 import com.pathz.UserManager.models.User;
 
 import javax.servlet.*;
@@ -10,26 +10,27 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/register")
-public class Registration extends HttpServlet {
+@WebServlet("/add")
+public class Add extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("reg.jsp").forward(request, response);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("addingUser.jsp");
+        requestDispatcher.forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        String confirm_password = request.getParameter("confirm_pswd");
 
-        String encryptedPassword = EncryptVerify.encryptPassword(password);
-
-        User user = new User(username, encryptedPassword);
+        User user = new User(username, password);
 
         try {
-            if (UserDAO.isExist(user)) {
-                System.out.println("Такой пользователь уже существует!");
+            if (!UserDAO.isExist(user)) {
+                UserDAO.insertUser(user);
+                response.sendRedirect("/users");
+            } else {
+                request.getRequestDispatcher("adding.jsp").forward(request, response);
             }
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();

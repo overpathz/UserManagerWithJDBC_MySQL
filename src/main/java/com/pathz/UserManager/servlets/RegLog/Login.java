@@ -1,4 +1,4 @@
-package com.pathz.UserManager.servlets;
+package com.pathz.UserManager.servlets.RegLog;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
