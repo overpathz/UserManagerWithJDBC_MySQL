@@ -30,8 +30,8 @@ public class Login extends HttpServlet {
                 response.sendRedirect("/users");
 
             } else {
-                System.out.println("DENIED");
-                response.sendRedirect("/login");
+                request.setAttribute("incorrect_data", "Incorrect login or password!");
+                request.getRequestDispatcher("log_reg/login.jsp").forward(request, response);
             }
 
         } catch (SQLException | ClassNotFoundException throwables) {

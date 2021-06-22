@@ -35,12 +35,10 @@ public class UserDAO {
     }
 
     public static void insertUser(User user) throws ClassNotFoundException, SQLException {
-        String hashPassword = EncryptVerify.encryptPassword(user.getPassword());
-
         connection = getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO_USER);
         preparedStatement.setString(1, user.getUsername());
-        preparedStatement.setString(2, hashPassword);
+        preparedStatement.setString(2, user.getPassword());
         preparedStatement.executeUpdate();
     }
 

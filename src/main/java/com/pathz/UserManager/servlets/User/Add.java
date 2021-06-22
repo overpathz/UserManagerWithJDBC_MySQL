@@ -2,6 +2,7 @@ package com.pathz.UserManager.servlets.User;
 
 import com.pathz.UserManager.DAO.UserDAO;
 
+import com.pathz.UserManager.Util.EncryptVerify;
 import com.pathz.UserManager.models.User;
 
 import javax.servlet.*;
@@ -23,7 +24,7 @@ public class Add extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        User user = new User(username, password);
+        User user = new User(username, EncryptVerify.encryptPassword(password));
 
         try {
             if (!UserDAO.isExistWithName(user)) {

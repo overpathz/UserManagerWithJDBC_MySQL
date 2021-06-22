@@ -11,12 +11,7 @@ import java.sql.SQLException;
 
 public class Test {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        String clearPassword = "123";
-        String hashedPassword = "$2a$12$BBccn.l3zb.WiLny1A0UXuuDwun7xx8TBgSnqk.aw5Ho8Vc4f/G/e";
-
-        String hashedRepeat = EncryptVerify.encryptPassword(clearPassword);
-
-
-        System.out.println(BCrypt.verifyer().verify(clearPassword.getBytes(StandardCharsets.UTF_8), hashedRepeat.getBytes(StandardCharsets.UTF_8)).verified);
+        String clearPassword = "qwerty";
+        String hashedPassword = "$2a$12$ibYy5UyojnF7Va2zi5u7q.OKYZYr9ZJxfWWdLa.LE8psbTX4QDnGS";
     }
 }

@@ -10,8 +10,7 @@
 
     <body>
 
-        <% String message; %>
-        <%  %>
+    <% String message = (String) request.getAttribute("incorrect_data"); %>
 
         <div class="form-wrap">
             <form action="/login" method="post">
@@ -20,6 +19,10 @@
                 <input type="password" placeholder="Password" id="password" name="password">
                 <input type="submit" id="sub_btn" value="Sign In">
             </form>
+
+            <% if (message != null) { %>
+            <p id="message"><%=message%></p>
+            <% } %>
 
             <p class="register"> If you dont have an account, <a class="register" href="/register"><b>Register</b></a></p>
 
