@@ -52,6 +52,7 @@ public class UserDAO {
 
         preparedStatement.setString(1, user.getUsername());
         preparedStatement.setString(2, hashPassword);
+        preparedStatement.setInt(3, user.getId());
 
         rowUpdated = preparedStatement.executeUpdate() > 0;
 

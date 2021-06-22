@@ -52,7 +52,7 @@
 
     <div align="center">
         <form action="/add" method="get">
-            <input id="add_user_button" type="submit" value="Add new user">
+            <input  id="add_user_button" type="submit" value="Add new user">
         </form>
     </div>
 
@@ -75,8 +75,17 @@
                 <tr align="center">
                     <td>${user.getId()}</td>
                     <td>${user.getUsername()}</td>
-                    <td><a href="<c:url value='/update/${user.getId()}'/>">Edit</a></td>
-                    <td><a href="<c:url value='/remove/${user.getId()}'/>">Delete</a></td>
+                    <td>
+                        <form action="/edit" method="get">
+                            <input type="submit" value="Edit">
+                            <input type="hidden" value="${user.getId()}" id="id" name="id">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/remove/${user.getId()}" method="get">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
                 </tr>
             </c:forEach>
 
@@ -85,3 +94,5 @@
 
 </body>
 </html>
+
+

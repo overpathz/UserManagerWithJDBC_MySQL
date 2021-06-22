@@ -14,28 +14,26 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/update")
-public class Update extends HttpServlet {
+@WebServlet("/edit")
+public class EditButton extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+
+        User existingUser = new User(null, null);
+
+        try {
+            existingUser = UserDAO.selectUser(id);
+        } catch (SQLException | ClassNotFoundException throwables) {
+            throwables.printStackTrace();
+        }
+
+        request.setAttribute("user", existingUser);
         request.getRequestDispatcher("updatingUser.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("post, upd: " + request.getParameter("id"));
-        int id = Integer.parseInt(request.getParameter("id"));
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        User user = new User(id, username, password);
-
-        try {
-            UserDAO.updateUser(user);
-            response.sendRedirect("/users");
-        } catch (SQLException | ClassNotFoundException throwables) {
-            throwables.printStackTrace();
-        }
 
     }
 }
