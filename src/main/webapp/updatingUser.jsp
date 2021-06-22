@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add user</title>
+    <title>Update user</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -51,11 +51,11 @@
 
 <body>
 
-<% String message = (String) request.getAttribute("already_exist"); %>
+<% String message = (String) request.getAttribute(""); %>
 
 <div class="form-wrap">
-    <form action="/add" method="post">
-        <h1>Add new user</h1>
+    <form action="/update" method="post">
+        <h1>Update user</h1>
         <input type="text" placeholder="Username" id="username" name="username">
         <input type="password" placeholder="Password" id="password" name="password">
 
@@ -63,7 +63,7 @@
         <p id="message"><%=message%></p>
         <% } %>
 
-        <input type="submit" id="sub_btn" value="Add">
+        <input type="submit" id="sub_btn" value="Update">
     </form>
 </div>
 

@@ -41,10 +41,6 @@
             border-radius: 5px;
             font-size: 15px;
         }
-
-        .users {
-            border: 1px;
-        }
     </style>
 
 </head>
@@ -67,7 +63,7 @@
     %>
 
     <c:if test="${!empty userList}">
-        <table align="center" border="1px">
+        <table align="center" border="1px gray" style="border-collapse: collapse">
             <tr>
                 <th width="80">ID</th>
                 <th width="250">Username</th>

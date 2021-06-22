@@ -30,7 +30,8 @@ public class Add extends HttpServlet {
                 UserDAO.insertUser(user);
                 response.sendRedirect("/users");
             } else {
-                request.getRequestDispatcher("adding.jsp").forward(request, response);
+                request.setAttribute("already_exist", "User is already exist!");
+                request.getRequestDispatcher("addingUser.jsp").forward(request, response);
             }
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();

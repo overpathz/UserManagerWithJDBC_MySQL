@@ -42,13 +42,16 @@
         background: #551006;
         transition: 1s;
     }
+
+    .back {
+        text-decoration: none;
+        color: white;
+    }
 </style>
 
 <body>
 
-<% request.setAttribute("already_exist", "already_exist"); %>
-<% String message = (String) request.getAttribute("User is already exist"); %>
-
+<% String message = (String) request.getAttribute("already_exist"); %>
 
 <div class="form-wrap">
     <form action="/add" method="post">
@@ -60,9 +63,15 @@
         <p id="message"><%=message%></p>
         <% } %>
 
-        <input type="submit" id="sub_btn" value="Sign Up">
+        <input type="submit" id="sub_btn" value="Add">
     </form>
+</div>
 
+<br>
+<br>
+
+<div align="center">
+    <a href="/users" class="back"><p>Back to main page..</p></a>
 </div>
 
 </body>
