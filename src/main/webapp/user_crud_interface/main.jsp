@@ -14,34 +14,7 @@
     <title>Main</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-
-    <style>
-        html, body {
-            margin:0;
-            padding:0;
-        }
-
-        #header {
-            background-color: orangered;
-            color: white;
-            margin-top: 0;
-            padding: 0;
-        }
-
-        * {
-            font-family: "JetBrains Mono";
-        }
-
-        #add_user_button {
-            background-color: #9d2900;
-            color: white;
-            border: none;
-            width: 10%;
-            height: 4vh;
-            border-radius: 5px;
-            font-size: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main_style.css" />
 
 </head>
 <body>

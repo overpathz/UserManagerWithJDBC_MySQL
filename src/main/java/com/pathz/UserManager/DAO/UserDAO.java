@@ -109,8 +109,21 @@ public class UserDAO {
         return rowDeleted;
     }
 
-    public static boolean isExist(User user) throws SQLException, ClassNotFoundException {
+    public static boolean isExistWithName(User user) throws SQLException, ClassNotFoundException {
         return selectAllUsers().stream().anyMatch(user1 -> user1.getUsername().equals(user.getUsername()));
     }
 
+    public static boolean verifyUser(User user) throws SQLException, ClassNotFoundException {
+        System.out.println(user.getPassword());
+        boolean theSameUsernames = selectAllUsers().stream().anyMatch(user1 -> user1.getUsername().equals(user.getUsername()));
+        boolean theSamePasswords = false;
+
+        for (User us:selectAllUsers()) {
+            if (EncryptVerify.verifyPassword(user.getPassword(), us.getPassword())) {
+                theSamePasswords = true;
+            }
+        }
+
+        return theSamePasswords && theSameUsernames;
+    }
 }

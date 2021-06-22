@@ -29,7 +29,7 @@ public class EditButton extends HttpServlet {
         }
 
         request.setAttribute("user", existingUser);
-        request.getRequestDispatcher("updatingUser.jsp").forward(request, response);
+        request.getRequestDispatcher("user_crud_interface/updatingUser.jsp").forward(request, response);
     }
 
     @Override

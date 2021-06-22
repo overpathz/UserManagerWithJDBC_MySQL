@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class Add extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("addingUser.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("user_crud_interface/addingUser.jsp");
         requestDispatcher.forward(request, response);
     }
 
@@ -26,12 +26,12 @@ public class Add extends HttpServlet {
         User user = new User(username, password);
 
         try {
-            if (!UserDAO.isExist(user)) {
+            if (!UserDAO.isExistWithName(user)) {
                 UserDAO.insertUser(user);
                 response.sendRedirect("/users");
             } else {
                 request.setAttribute("already_exist", "User is already exist!");
-                request.getRequestDispatcher("addingUser.jsp").forward(request, response);
+                request.getRequestDispatcher("user_crud_interface/addingUser.jsp").forward(request, response);
             }
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();

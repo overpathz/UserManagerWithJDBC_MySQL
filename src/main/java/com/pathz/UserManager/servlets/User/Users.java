@@ -19,7 +19,7 @@ public class Users extends HttpServlet {
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
-        req.getRequestDispatcher("main.jsp").forward(req, resp);
+        req.getRequestDispatcher("user_crud_interface/main.jsp").forward(req, resp);
     }
 
     @Override

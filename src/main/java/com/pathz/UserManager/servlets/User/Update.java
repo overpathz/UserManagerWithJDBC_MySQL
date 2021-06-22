@@ -18,12 +18,11 @@ import java.sql.SQLException;
 public class Update extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("updatingUser.jsp").forward(request, response);
+        request.getRequestDispatcher("user_crud_interface/updatingUser.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("post, upd: " + request.getParameter("id"));
         int id = Integer.parseInt(request.getParameter("id"));
         String username = request.getParameter("username");
         String password = request.getParameter("password");
