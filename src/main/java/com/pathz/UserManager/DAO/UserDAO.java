@@ -4,6 +4,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.pathz.UserManager.Util.EncryptVerify;
 import com.pathz.UserManager.models.User;
 
+import java.nio.charset.StandardCharsets;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ public class UserDAO {
     private static final String SELECT_ALL_USERS = "select * from user;";
     private static final String DELETE_USER = "delete from user where id = ?;";
     private static final String UPDATE_USER = "update user set username = ?, password = ? where id = ?;";
+    private static final String FIND_USER_BY_USERNAME = "select * from user where username = ?;";
 
     private static Connection getConnection() throws SQLException, ClassNotFoundException {
         Connection connection;
@@ -114,16 +116,36 @@ public class UserDAO {
     }
 
     public static boolean verifyUser(User user) throws SQLException, ClassNotFoundException {
-        System.out.println(user.getPassword());
-        boolean theSameUsernames = selectAllUsers().stream().anyMatch(user1 -> user1.getUsername().equals(user.getUsername()));
-        boolean theSamePasswords = false;
+        boolean theSameUsernames = isExistWithName(user);
+        boolean theSamePasswords;
 
-        for (User us:selectAllUsers()) {
-            if (EncryptVerify.verifyPassword(user.getPassword(), us.getPassword())) {
-                theSamePasswords = true;
-            }
+        User userDB = findUserByUsername(user.getUsername());
+
+        byte[] userPassword = user.getPassword().getBytes(StandardCharsets.UTF_8);
+        byte[] userDBPassword = userDB.getPassword().getBytes(StandardCharsets.UTF_8);
+
+        theSamePasswords = BCrypt.verifyer().verify(userPassword, userDBPassword).verified;
+
+        return (theSamePasswords && theSameUsernames);
+    }
+
+    public static User findUserByUsername(String username) throws SQLException, ClassNotFoundException {
+        Connection connection = getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(FIND_USER_BY_USERNAME);
+
+        preparedStatement.setString(1, username);
+
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        User user = null;
+
+        while (resultSet.next()) {
+            int id = resultSet.getInt("id");
+            String foundUsername = resultSet.getString("username");
+            String password = resultSet.getString("password");
+            user = new User(id, foundUsername, password);
         }
 
-        return theSamePasswords && theSameUsernames;
+        return user;
     }
 }

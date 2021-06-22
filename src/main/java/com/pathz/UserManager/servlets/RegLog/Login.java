@@ -25,14 +25,15 @@ public class Login extends HttpServlet {
 
         try {
             if (UserDAO.verifyUser(user)) {
-                System.out.println("Все ок");
                 HttpSession session = request.getSession();
                 session.setAttribute("name", username);
                 response.sendRedirect("/users");
+
             } else {
-                System.out.println("Такого юзера в бд немає");
+                System.out.println("DENIED");
                 response.sendRedirect("/login");
             }
+
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
