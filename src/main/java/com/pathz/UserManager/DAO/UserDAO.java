@@ -127,7 +127,7 @@ public class UserDAO {
         return (theSamePasswords && theSameUsernames);
     }
 
-    public static User findUserByUsername(String username) throws SQLException, ClassNotFoundException {
+    private static User findUserByUsername(String username) throws SQLException, ClassNotFoundException {
         Connection connection = getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(FIND_USER_BY_USERNAME);
 
