@@ -19,8 +19,7 @@
 
 ## Application review
 - #### Register
-
-![image(https://lh4.googleusercontent.com/F1oUH4mf6xDVKgWpw9w7NWFaV1N5lhpCfA9i_Y7un2NHU6ZoIIDYxy9N5VJqnEfqmVpkoJqi4Cza0rQ1QM8vk52nIT8NY0eJBd2V4yTT1nWd46EtU4HyXqz2b4HVZrpfQ=w1280)
+![image](https://lh4.googleusercontent.com/F1oUH4mf6xDVKgWpw9w7NWFaV1N5-lhpCfA9i_Y7un2NHU6ZoIIDYxy9N5VJqnEfqmVpkoJqi4Cza0rQ1QM8vk52nIT8NY0eJBd2V4yTT1nWd46EtU4HyXqz2b4HVZrpfQ=w1280)
     
 - #### Login
 
