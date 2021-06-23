@@ -56,7 +56,6 @@ IDE -> Run/Debug configuration -> Add new configuration ("+") -> Tomcat Server -
 -> Local -> Application server (Choose the location of unzipped folder)<br>
 
 ##### 4. Input your connection data in UserDAO class in DAO package ->
-<br>
 private static final String dbURL = "jdbc:mysql://localhost:3306/user_manager";<br>
 private static final String dbUser = "root";<br>
 private static final String dbPassword = "root";<br>
