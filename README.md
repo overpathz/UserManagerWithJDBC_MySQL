@@ -19,7 +19,7 @@
 
 ## Application review
 - #### Register
-    ![image](https://lh4.googleusercontent.com/FyypQAhD6RuUkPGg24QTkDizIOM69Qmjpr-1r6ir_LRr8zU_2sRhQUiIqV_bJEDo5ErLvPCSKKaq8DxUd_N-2tW90byR-rsBeylFArPeHD3Hq6U9wxwXfV6u37j5U7j7Nw=w1280)
+    ![image](https://ibb.co/MByQXFb)
     
 - #### Login
 
