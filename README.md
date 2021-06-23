@@ -41,23 +41,23 @@
 
 ## Set up
 
-#### 1. You need to have installed Java, at least 8 version
+### 1. You need to have installed Java, at least 8 version
 https://www.oracle.com/ru/java/technologies/javase/javase-jdk8-downloads.html
-#### 2. You need to install MySQL DB connector ->
+### 2. You need to install MySQL DB connector ->
 (jar connector in downloaded archive) https://dev.mysql.com/downloads/connector/j/<br><br>
 <b>DO:</b><br>
 IDE -> File -> Project Structure -> Dependencies tab in Modules -><br>
 -> "+" button -> "Jar or.." -> Find unzipped jar file and import to the project
 
-#### 3. You need to install Apache Tomcat Server (Servlet container) ->
+### 3. You need to install Apache Tomcat Server (Servlet container) ->
 https://tomcat.apache.org/download-80.cgi<br>
 After downloading, unzip the archive in any directory you want.<br><br>
 IDE -> Run/Debug configuration -> Add new configuration ("+") -> Tomcat Server -><br>
 -> Local -> Application server (Choose the location of unzipped folder)<br>
 
-#### 4. Input your connection data in UserDAO class in DAO package ->
+### 4. Input your connection data in UserDAO class in DAO package ->
 private static final String dbURL = "jdbc:mysql://localhost:3306/user_manager";<br>
 private static final String dbUser = "root";<br>
 private static final String dbPassword = "root";<br>
 
-#### 5. Run the application (Tomcat server)
+### 5. Run the application (Tomcat server)
