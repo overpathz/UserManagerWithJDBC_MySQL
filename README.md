@@ -57,8 +57,8 @@ IDE -> Run/Debug configuration -> Add new configuration ("+") -> Tomcat Server -
 
 ##### 4. Input your connection data in UserDAO class in DAO package ->
 <br>
-<t> private static final String dbURL = "jdbc:mysql://localhost:3306/user_manager";<br>
-<t> private static final String dbUser = "root";<br>
-<t> private static final String dbPassword = "root";<br>
+private static final String dbURL = "jdbc:mysql://localhost:3306/user_manager";<br>
+private static final String dbUser = "root";<br>
+private static final String dbPassword = "root";<br>
 
 ##### 5. Run the application (Tomcat server)
