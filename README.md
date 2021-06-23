@@ -44,7 +44,7 @@
 ##### 1. You need to have installed Java, at least 8 version
 https://www.oracle.com/ru/java/technologies/javase/javase-jdk8-downloads.html
 ##### 2. You need to install MySQL DB connector ->
-(jar connector in downloaded archive) https://dev.mysql.com/downloads/connector/j/
+(jar connector in downloaded archive) https://dev.mysql.com/downloads/connector/j/<br>
 DO:
 IDE -> File -> Project Structure -> Dependencies tab in Modules ->
 -> "+" button -> "Jar or.." -> Find unzipped jar file and import to the project
