@@ -19,23 +19,23 @@
 
 ## Application review
 - #### Register
-    ![image](https://ibb.co/MByQXFb)
+    ![image](https://i.ibb.co/nPqtWxT/Screenshot-50.png)
     
 - #### Login
 
-    ![image](https://lh6.googleusercontent.com/BckFMa6gwQU6qN98Y9SPYGd0cpVhUVqsv9WPW7xQkOpcX6c8SFUE1rt0hMctmnGe9xy7n0OjgZLtJ--P-r4_3csGgmwQjO12CNvaeIVIxcT48e04WwWi4Yb8kz0aJFaCMA=w1280)
+    ![image](https://i.ibb.co/0D8WJdd/Screenshot-51.png)
 
 - #### User control panel (CRUD Menu)
 
-    ![image](https://lh6.googleusercontent.com/tNWy2jtBhDdaA-EMw40hyyAY3fDsffDFpllegACc3bLUBw49lcfpJDCGeeZKleXS8PESxwBKrYILI_THkhj95jDyitQagv7ZY8C2XgRN7AHNhChmNJj1sI3WfyRcME2XZw=w1280)
+    ![image](https://i.ibb.co/PC7Mw3y/Screenshot-52.png)
     
 - #### Add user
 
-    ![image](https://lh3.googleusercontent.com/SeC1O9Vf3rueMKZt2d8YdS9idHd02wdqcWShCA5Qgs4V93F0RQht1gQcWMkfhOfULCAXQPdaAIDOMtY717AHPgMMAh8SRod7b5cD0zQgks2aBdyLFYrY0HgbvAsbrEZnfg=w1280)
+    ![image](https://i.ibb.co/B203PCL/Screenshot-53.png)
     
 - #### Update user
 
-    ![image](https://lh4.googleusercontent.com/SFNTrpplstlTX4337DxPM5ajylRv4Gztc1Efitb2OxUrr6LVAGognUkvGFVl_VLOq9bnTdrG5LDwU6MRzwxfn78X9hCS6arER4GfCR2G_mCYkK3u9upzJCzZskDdDhDSJQ=w1280)
+    ![image](https://i.ibb.co/9Gk3MSS/Screenshot-54.png)
 
 
 ## Set up
