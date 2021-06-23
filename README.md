@@ -60,3 +60,5 @@ private static final String dbUser = "root";<br>
 private static final String dbPassword = "root";<br>
 
 ### 5. Run the application (Tomcat server)
+![image](https://i.ibb.co/98LFt2T/Screenshot-55.png)
+<br><br>
