@@ -45,19 +45,20 @@
 https://www.oracle.com/ru/java/technologies/javase/javase-jdk8-downloads.html
 ##### 2. You need to install MySQL DB connector ->
 (jar connector in downloaded archive) https://dev.mysql.com/downloads/connector/j/<br>
-DO:
-IDE -> File -> Project Structure -> Dependencies tab in Modules ->
+DO:<br>
+IDE -> File -> Project Structure -> Dependencies tab in Modules -><br>
 -> "+" button -> "Jar or.." -> Find unzipped jar file and import to the project
 
 ##### 3. You need to install Apache Tomcat Server (Servlet container) ->
-https://tomcat.apache.org/download-80.cgi
-After downloading, unzip the archive in any directory you want.
-IDE -> Run/Debug configuration -> Add new configuration ("+") -> Tomcat Server -> Local ->
--> Application server (Choose the location of unzipped folder)
-##### 4. Input your connection data in UserDAO class in DAO package
+https://tomcat.apache.org/download-80.cgi<br>
+After downloading, unzip the archive in any directory you want.<br>
+IDE -> Run/Debug configuration -> Add new configuration ("+") -> Tomcat Server -><br>
+-> Local -> Application server (Choose the location of unzipped folder)<br>
+
+##### 4. Input your connection data in UserDAO class in DAO package ->
 <br>
-private static final String dbURL = "jdbc:mysql://localhost:3306/user_manager";
-    private static final String dbUser = "root";
-    private static final String dbPassword = "root";
+<t> private static final String dbURL = "jdbc:mysql://localhost:3306/user_manager";<br>
+<t> private static final String dbUser = "root";<br>
+<t> private static final String dbPassword = "root";<br>
 
 ##### 5. Run the application (Tomcat server)
