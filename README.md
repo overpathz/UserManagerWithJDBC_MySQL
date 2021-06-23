@@ -42,7 +42,7 @@
 
 ### 1. You need to have installed Java, at least 8 version
 https://www.oracle.com/ru/java/technologies/javase/javase-jdk8-downloads.html
-### 2. You need to install MySQL DB connector ->
+### 2. You need to install MySQL JDBC connector ->
 (jar connector in downloaded archive) https://dev.mysql.com/downloads/connector/j/<br><br>
 <b>DO:</b><br>
 IDE -> File -> Project Structure -> Dependencies tab in Modules -><br>
