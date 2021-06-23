@@ -40,7 +40,7 @@
 
 ## Set up
 
-### 1. You need to have installed Java, at least 8 version
+### 1. You need to have installed Java 8
 https://www.oracle.com/ru/java/technologies/javase/javase-jdk8-downloads.html
 ### 2. You need to install MySQL JDBC connector ->
 (jar connector in downloaded archive) https://dev.mysql.com/downloads/connector/j/<br><br>
