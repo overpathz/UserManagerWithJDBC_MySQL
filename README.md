@@ -44,14 +44,14 @@
 #### 1. You need to have installed Java, at least 8 version
 https://www.oracle.com/ru/java/technologies/javase/javase-jdk8-downloads.html
 #### 2. You need to install MySQL DB connector ->
-(jar connector in downloaded archive) https://dev.mysql.com/downloads/connector/j/<br>
+(jar connector in downloaded archive) https://dev.mysql.com/downloads/connector/j/<br><br>
 <b>DO:</b><br>
 IDE -> File -> Project Structure -> Dependencies tab in Modules -><br>
 -> "+" button -> "Jar or.." -> Find unzipped jar file and import to the project
 
 #### 3. You need to install Apache Tomcat Server (Servlet container) ->
 https://tomcat.apache.org/download-80.cgi<br>
-After downloading, unzip the archive in any directory you want.<br>
+After downloading, unzip the archive in any directory you want.<br><br>
 IDE -> Run/Debug configuration -> Add new configuration ("+") -> Tomcat Server -><br>
 -> Local -> Application server (Choose the location of unzipped folder)<br>
 
