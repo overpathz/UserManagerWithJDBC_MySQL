@@ -88,7 +88,9 @@ public class UserDAO {
             String surname = resultSet.getString("username");
             String password = resultSet.getString("password");
             int id = resultSet.getInt("id");
+            
             User user = new User(id, surname, password);
+            
             userList.add(user);
         }
 
