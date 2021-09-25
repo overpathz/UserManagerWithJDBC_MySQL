@@ -1,6 +1,6 @@
-package com.pathz.UserManager.servlets.RegLog;
+package com.pathz.UserManager.servlets.reg_log;
 
-import com.pathz.UserManager.DAO.UserDAO;
+import com.pathz.UserManager.dao.UserDAO;
 import com.pathz.UserManager.models.User;
 
 import javax.servlet.*;

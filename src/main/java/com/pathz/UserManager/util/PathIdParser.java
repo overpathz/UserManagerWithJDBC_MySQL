@@ -1,6 +1,4 @@
-package com.pathz.UserManager.Util;
-
-import java.util.Arrays;
+package com.pathz.UserManager.util;
 
 public class PathIdParser {
     public static int parse(String requestPath) {

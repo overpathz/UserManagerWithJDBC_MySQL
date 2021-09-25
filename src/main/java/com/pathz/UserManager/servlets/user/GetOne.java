@@ -1,10 +1,9 @@
-package com.pathz.UserManager.servlets.User;
+package com.pathz.UserManager.servlets.user;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.sql.SQLException;
 
 @WebServlet("/get")
 public class GetOne extends HttpServlet {

@@ -1,6 +1,6 @@
-package com.pathz.UserManager.servlets.User;
+package com.pathz.UserManager.servlets.user;
 
-import com.pathz.UserManager.DAO.UserDAO;
+import com.pathz.UserManager.dao.UserDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

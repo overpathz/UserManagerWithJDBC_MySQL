@@ -1,7 +1,7 @@
-package com.pathz.UserManager.servlets.RegLog;
+package com.pathz.UserManager.servlets.reg_log;
 
-import com.pathz.UserManager.DAO.UserDAO;
-import com.pathz.UserManager.Util.EncryptVerify;
+import com.pathz.UserManager.dao.UserDAO;
+import com.pathz.UserManager.util.EncryptVerify;
 import com.pathz.UserManager.models.User;
 
 import javax.servlet.*;
@@ -12,6 +12,7 @@ import java.sql.SQLException;
 
 @WebServlet("/register")
 public class Register extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("log_reg/reg.jsp").forward(request, response);
@@ -25,6 +26,8 @@ public class Register extends HttpServlet {
 
         String encryptedPassword = EncryptVerify.encryptPassword(password);
         User user = new User(username, encryptedPassword);
+
+        System.out.println(encryptedPassword);
 
         try {
             if (UserDAO.isExistWithName(user)) {

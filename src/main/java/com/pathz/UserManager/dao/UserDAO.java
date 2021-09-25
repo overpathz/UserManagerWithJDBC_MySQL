@@ -1,7 +1,7 @@
-package com.pathz.UserManager.DAO;
+package com.pathz.UserManager.dao;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import com.pathz.UserManager.Util.EncryptVerify;
+import com.pathz.UserManager.util.EncryptVerify;
 import com.pathz.UserManager.models.User;
 
 import java.nio.charset.StandardCharsets;
@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
-    private static Connection connection;
 
     private static final String dbURL = "jdbc:mysql://localhost:3306/user_manager";
     private static final String dbUser = "root";
@@ -35,7 +34,7 @@ public class UserDAO {
     }
 
     public static void insertUser(User user) throws ClassNotFoundException, SQLException {
-        connection = getConnection();
+        Connection connection = getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO_USER);
         preparedStatement.setString(1, user.getUsername());
         preparedStatement.setString(2, user.getPassword());

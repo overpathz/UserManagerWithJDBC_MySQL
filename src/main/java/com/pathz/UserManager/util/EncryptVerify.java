@@ -1,4 +1,4 @@
-package com.pathz.UserManager.Util;
+package com.pathz.UserManager.util;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 

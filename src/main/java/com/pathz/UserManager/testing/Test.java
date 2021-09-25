@@ -1,12 +1,5 @@
 package com.pathz.UserManager.testing;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
-import at.favre.lib.crypto.bcrypt.BCryptParser;
-import com.pathz.UserManager.DAO.UserDAO;
-import com.pathz.UserManager.Util.EncryptVerify;
-import com.pathz.UserManager.models.User;
-
-import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
 
 public class Test {

@@ -1,8 +1,8 @@
-package com.pathz.UserManager.servlets.User;
+package com.pathz.UserManager.servlets.user;
 
-import com.pathz.UserManager.DAO.UserDAO;
+import com.pathz.UserManager.dao.UserDAO;
 
-import com.pathz.UserManager.Util.EncryptVerify;
+import com.pathz.UserManager.util.EncryptVerify;
 import com.pathz.UserManager.models.User;
 
 import javax.servlet.*;

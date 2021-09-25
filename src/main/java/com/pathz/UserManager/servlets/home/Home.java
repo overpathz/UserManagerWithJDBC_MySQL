@@ -1,4 +1,4 @@
-package com.pathz.UserManager.servlets.Home;
+package com.pathz.UserManager.servlets.home;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
