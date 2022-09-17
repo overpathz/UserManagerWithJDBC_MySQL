@@ -19,23 +19,28 @@
 
 ## Application review
 - #### Register
-    ![image](https://i.ibb.co/nPqtWxT/Screenshot-50.png)
+    ![sign_up1](https://user-images.githubusercontent.com/72043323/190868517-dd3bcb53-b71b-4381-b311-8c7dbd1f22e8.png)
+
     
 - #### Login
 
-    ![image](https://i.ibb.co/0D8WJdd/Screenshot-51.png)
+    ![log_in2](https://user-images.githubusercontent.com/72043323/190868523-42d04181-4616-48e6-8ed0-8b3cc0df919b.png)
+
 
 - #### User control panel (CRUD Menu)
 
-    ![image](https://i.ibb.co/PC7Mw3y/Screenshot-52.png)
+    ![man_system3](https://user-images.githubusercontent.com/72043323/190868525-bf8fe4a1-ed83-499a-8219-90d932e81afd.png)
+
     
 - #### Add user
 
-    ![image](https://i.ibb.co/B203PCL/Screenshot-53.png)
+    ![add4](https://user-images.githubusercontent.com/72043323/190868530-b0cd86aa-6690-40a0-a9fd-d244970f3632.png)
+
     
 - #### Update user
 
-    ![image](https://i.ibb.co/9Gk3MSS/Screenshot-54.png)
+    ![upd5](https://user-images.githubusercontent.com/72043323/190868538-b62fdbfa-3daa-4883-a1a0-9e4655124f54.png)
+
 
 
 ## Set up
